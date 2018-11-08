@@ -1,0 +1,212 @@
+@import "@coopdigital/foundations-vars";
+
+/*===============================================
+Forms - Co-op CSS Foundations
+===============================================*/
+
+.coop-form {
+  margin-bottom: var(--spacing-base);
+}
+
+.coop-form__row {
+  margin-bottom: var(--quarter-spacing-unit);
+
+  &::before,
+  &::after {
+    content: " ";
+    display: table;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+label,
+.coop-form__label {
+  font-size: 1.125rem;
+  font-family: var(--font-family);
+  font-weight: 500;
+  display: block;
+  margin: 0 0 calc(var(--spacing-base--1-4) / 2);
+
+  @media var(--mq-medium) {
+    font-size: 1.25rem;
+  }
+}
+
+.coop-label__hint {
+  display: block;
+  color: var(--color-grey-dark);
+  font-size: 0.75rem;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.coop-form__label--inline {
+  display: inline;
+}
+
+legend,
+.coop-form__legend {
+  font-family: var(--font-family);
+  font-weight: 500;
+  display: block;
+  margin: 0 0 var(--spacing-base--1-4);
+  font-size: 1.5rem;
+
+  @media var(--mq-medium) {
+    font-size: 1.75rem;
+  }
+}
+
+fieldset,
+.coop-form__fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+input[type="text"],
+.coop-form__input,
+textarea,
+.coop-form__textarea  {
+  display: block;
+  width: 100%;
+  padding: var(--spacing-base--1-6) var(--spacing-base--1-8);
+  background: var(--color-white);
+  border: 1px solid;
+  border-color: var(--color-grey-dark);
+  color: var(--color-text);
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.25rem;
+
+  &:focus {
+    background: var(--color-white);
+    border-color: var(--color-black);
+    outline-offset: 3px;
+    outline: 2px dotted var(--color-link--focus);
+    transition: none;
+  }
+
+  &:hover::-webkit-input-placeholder {
+    color: var(--color-grey-mid);
+  }
+
+  &:focus::-webkit-input-placeholder {
+    transition: opacity 0.5s 0.5s ease;
+    opacity: 0;
+  }
+
+  &.coop-form__field--inline {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+textarea,
+.coop-form__textarea {
+  resize: vertical;
+}
+
+select,
+.coop-form__select {
+  appearance: menulist;
+  height: 2.8175em;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  padding: var(--spacing-base--1-6) var(--spacing-base--1-8);
+  background: var(--color-white);
+  border: 1px solid;
+  border-color: var(--color-grey-dark);
+  color: var(--color-text);
+  outline: 0;
+  transition: all 0.3s ease-in-out;
+  font-size: 1.25rem;
+
+  &:focus {
+    background: var(--color-white);
+    border-color: var(--color-black);
+    outline-offset: 3px;
+    outline: 2px dotted var(--color-link--focus);
+    transition: none;
+  }
+
+  &:hover::-webkit-input-placeholder {
+    color: var(--color-grey-mid);
+  }
+
+  &:focus::-webkit-input-placeholder {
+    transition: opacity 0.5s 0.5s ease;
+    opacity: 0;
+  }
+
+  &.coop-form__field--inline {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+input[type="checkbox"],
+.coop-form__checkbox,
+input[type="radio"],
+.coop-form__radio {
+  display: inline;
+  cursor: pointer;
+}
+
+.coop-form__indented {
+  border-left: 3px solid var(--color-brand);
+  padding-top: var(--spacing--base--1-4);
+  padding-right: 0;
+  padding-bottom: var(--spacing--base--1-4);
+  padding-left: var(--spacing--base--1-2);
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: var(--spacing--base--1-2);
+  margin-left: calc(var(--spacing--base--1-2) / 1.1);
+  width: calc(100% - var(--spacing--base) - 3px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  label {
+    font-size: 1rem;
+  }
+
+  @media var(--mq-medium) {
+    label {
+      font-size: 1.1rem;
+    }
+  }
+
+  fieldset {
+    margin-bottom: var(--spacing-base--3-4);
+  }
+}
+
+.coop-form__invalid {
+  border-color: var(--color-red-mid);
+}
+
+.coop-form__error {
+  position: relative;
+  margin: 0.5rem 0;
+  padding-left: 2rem;
+  color: var(--color-red-mid);
+
+  &::before {
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0.5rem;
+  }
+}
