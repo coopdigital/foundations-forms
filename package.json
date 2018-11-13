@@ -1,10 +1,10 @@
 {
   "name": "@coopdigital/foundations-forms",
-  "version": "1.0.0",
-  "description": "Co-op CSS Foundations: Forms",
+  "version": "1.0.1",
+  "description": "CSS Foundations: Forms",
   "main": "dist/forms.css",
   "style": "src/forms.pcss",
-  "author": "Matthew Morek (matthew.morek@coopdigital.co.uk)",
+  "author": "Matthew Morek <matthew.morek@coopdigital.co.uk> (https://github.com/matthewmorek)",
   "license": "MIT",
   "files": [
     "dist",
